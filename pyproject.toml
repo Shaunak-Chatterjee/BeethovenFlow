@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "beethovenflow"
+version = "1.0.0"
+description = "Motion-aware Beethoven music player that adapts to your interaction patterns"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "BeethovenFlow"}
+]
+keywords = ["beethoven", "music", "mpv", "mouse-tracking", "ambient"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Sound/Audio :: Players",
+]
+
+dependencies = [
+    "pynput>=1.7.6",
+    "numpy>=1.21.0",
+    "yt-dlp>=2023.1.1",
+]
+
+[project.scripts]
+beethovenflow = "beethovenflow.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/beethovenflow/beethovenflow"
+Repository = "https://github.com/beethovenflow/beethovenflow"
+
+[tool.setuptools.packages.find]
+where = ["src"]
