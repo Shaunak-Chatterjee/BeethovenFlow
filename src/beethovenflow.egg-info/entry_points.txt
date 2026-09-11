@@ -1,0 +1,2 @@
+[console_scripts]
+beethovenflow = beethovenflow.__main__:main
